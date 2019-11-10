@@ -10,6 +10,19 @@
     "serve:electron": "vue-cli-service serve:electron",
     "postinstall": "electron-builder install-app-deps"
   },
+  "build": {
+    "appId": "timeclock",
+    "productName": "timeclock",
+    "directories": {
+      "output": "build"
+    },
+    "win": {
+      "target": [
+        "zip"
+      ],
+      "artifactName": "${productName}-Setup-${version}.${ext}"
+    }
+  },   
   "dependencies": {
     "axios": "^0.18.0",
     "date-fns": "^1.29.0",
@@ -46,19 +59,6 @@
       "autoprefixer": {}
     }
   },
-"build": {
-    "appId": "timeclock",
-    "productName": "timeclock",
-    "directories": {
-      "output": "build"
-    },
-    "win": {
-      "target": [
-        "zip"
-      ],
-      "artifactName": "${productName}-Setup-${version}.${ext}",
-    }
-  },  
   "browserslist": [
     "> 1%",
     "last 2 versions",
