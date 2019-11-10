@@ -46,6 +46,19 @@
       "autoprefixer": {}
     }
   },
+"build": {
+    "appId": "timeclock",
+    "productName": "timeclock",
+    "directories": {
+      "output": "build"
+    },
+    "win": {
+      "target": [
+        "zip"
+      ],
+      "artifactName": "${productName}-Setup-${version}.${ext}",
+    }
+  },  
   "browserslist": [
     "> 1%",
     "last 2 versions",
